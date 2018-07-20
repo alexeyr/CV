@@ -1,0 +1,117 @@
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{banking}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
+\moderncvcolor{blue}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+%\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.75]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+
+% personal data
+\name{Alexey}{Romanov}
+\address{Zelenograd}{Moscow}{Russia}               % optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
+%\phone[mobile]{+7~(234)~567~890}
+\email{alexey.v.romanov@gmail.com}
+\social[linkedin]{alexeyromanov}                        % optional, remove / comment the line if not wanted
+\social[twitter]{alexey\_r}
+\social[github]{alexeyr}
+\extrainfo{%
+\httplink[\faStackOverflow~Alexey Romanov]{stackoverflow.com/users/9204/alexey-romanov}%
+}
+\begin{document}
+\makecvtitle
+
+\section{Education}
+\cventry{1998--2003}{Specialist in Applied Mathematics}{Moscow State University}{Moscow}{Diploma with honours (Red diploma)}{Specialization: Mathematics, Mathematical Logic}
+
+\section{Objective and Summary}
+I am interested in working as a Senior Software Engineer on challenging projects. I am an experienced JVM developer (primarily using Scala and Kotlin) with excellent knowledge of algorithms and data structures. I also have some experience in native languages (C++, Rust, C) and web programming.
+
+\section{Professional Skills}
+\subsection{Primary}
+\cvlistitem{Languages: Scala, Kotlin, Java, Erlang}
+\cvlistitem{Algorithms and data structures}
+\cvlistitem{Concurrent and parallel programming}
+\cvlistitem{Teaching, mentoring}
+\subsection{Intermediate}
+\cvlistitem{Languages: SQL, C\#, Haskell, JavaScript, C++, Prolog}
+\cvlistitem{Databases (particularly SQLite)}
+\cvlistitem{Compilers, optimizations, code transformation}
+\cvlistitem{OSGi, Eclipse RCP}
+\cvlistitem{IDEA/Android Studio plugin development}
+\subsection{Basic}
+\cvlistitem{Languages: C, Rust, OCaml, Lua, Scheme/Racket}
+\cvlistitem{Android development}
+\cvlistitem{Machine Learning}
+
+\section{Employment History}
+\cventry{2003--present}{Assistant Professor}{Moscow Institute of Electronic Technology}{Zelenograd}{}{}
+\cvlistitem{Developed and taught new courses: 
+	\begin{itemize}
+		\item Mathematical Logic and Algorithm Theory
+		\item Functional Programming (using Haskell)
+		\item Functional and Logical Programming (using Erlang and Prolog)
+	\end{itemize}}
+\cvlistitem{Supervised master students}
+\cvlistitem{Coauthor of 2 textbooks}
+
+\cventry{2010--2012}{Developer, Lead Developer}{Focus-Media}{Zelenograd}{}{Software development and integration}
+
+\cventry{2013}{Software Architect}{Likemelody LLC}{Zelenograd}{}{Natural language processing software}
+
+\cventry{2013--present}{Key Project Engineer}{Huawei Research}{Moscow}{}{Work primarily on Scalan and related/derived projects}
+
+\section{Main Projects}
+
+\cventry{2014--present}{Scalan}{Huawei Research}{}{}{A domain-specific optimization and specialization framework}
+	\cvlistitem{Skills: Scala, Compilers, Optimization, Code transformation}
+	\cvlistitem{Achievements: One of main developers of Scalan framework and Scala compiler plugin for this framework}
+	\cvlistitem{Effects: coauthor of a WGP2014 paper, patent filed}
+
+\cventry{2016}{SQLite Kernel Engine} {Huawei Research}{}{}{An approach to SQLite query optimization}
+	\cvlistitem{Skills: Scala, C++, Lua, Compilers, Optimization, Code transformation}
+	\cvlistitem{Achievements: Lua and C++ code generation from SQL queries, SQLite calls generated code instead of its own bytecode interpreter when detecting a repeated query}
+	\cvlistitem{Effects: 1.5 to 10x speedup on some queries, patent filed}
+
+\cventry{2010--2014}{erlang-sqlite3}{Focus-Media, then side-project}{}{}{An Erlang library for work with SQLite3 databases}
+	\cvlistitem{Skills: Erlang, C, SQLite, Optimization}
+	\cvlistitem{Achievements: Took over maintenance and development of an abandoned Erlang library for working with SQLite3 databases.
+	Attracted users and contributors.}
+	\cvlistitem{Effects: used in projects inside Focus-Media and by external developers}
+
+\cventry{2010--2012}{FocusPlay}{Focus-Media}{}{}{A system for automatically downloading and playing video on remote devices}
+	\cvlistitem{Skills: Erlang, C, Java, Network programming, Concurrent programming, Optimization}
+	\cvlistitem{Achievements: Responsible for developing the client side scheduling and processing, assisted with server side}
+	\cvlistitem{Effects: stable processing, successful deployment to multiple satisfied customers}
+
+\cventry{2011--2012}{Several Eclipse RCP projects}{Focus-Media}{}{}{}
+	\cvlistitem{Skills: Scala, Java, OSGi, Eclipse RCP, Network programming, UI design}
+	\cvlistitem{Achievements: Developer on a SCADA system, responsible for aggregating sensor data timeseries, allowing and processing user queries on the data. Developer on automated workplace in a security system.}
+
+\cventry{2013}{A phone customer service system}{LikeMelody LLC}{}{}{}
+	\cvlistitem{Skills: Natural Language Processing, Machine Learning, Artificial Intelligence}
+	\cvlistitem{Achievements: Architect and developer on a system automating first-line phone call center for small business.}
+	\cvlistitem{Effect: Unreleased when I left the company.}
+
+\section{Languages}
+\cvitemwithcomment{Russian}{Native}{}
+\cvitemwithcomment{English}{Fluent (written), Advanced (spoken)}{}
+
+
+\section{Patents}
+	\cvlistitem{Hongbo Zhang, Alexander Slesarenko, Alexey Romanov. \textit{A system and method for constructing rewrite rules in DSL compilers}. 2014.}
+	\cvlistitem{Alexander Slesarenko, Alexey Romanov, Dmitry Vyal. \textit{A system and a method for application-specific query execution in DBMS}. 2016.}
+
+\section{Publications}
+	\cvlistitem{Alexey Romanov. \textit{De Jongh and Glivenko theorems for equality theories}. Journal of Applied Non-Classical Logics, 2007}
+	\cvlistitem{Alexander Slesarenko, Alexander Filippov, Alexey Romanov. \textit{First-class Isomorphic Specialization by Staged Evaluation}. WGP2014}
+	\cvlistitem{Alexander Slesarenko, Alexey Romanov. \textit{Scalan: a Framework for Domain-Specific Hotspot Optimization (Invited Tutorial)}. FHPC2015}
+
+\end{document}
