@@ -7,12 +7,13 @@
 %\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
 
 % character encoding
-%\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
 %\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
 
 % adjust the page margins
 \usepackage[scale=0.75]{geometry}
 %\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+\usepackage{fontawesome}
 
 % personal data
 \name{Alexey}{Romanov}
@@ -20,10 +21,10 @@
 %\phone[mobile]{+7~(234)~567~890}
 \email{alexey.v.romanov@gmail.com}
 \social[linkedin]{alexeyromanov}                        % optional, remove / comment the line if not wanted
-\social[twitter]{alexey\_r}
+\social[twitter]{alexey_r}
 \social[github]{alexeyr}
 \extrainfo{%
-\httplink[\faStackOverflow~Alexey Romanov]{stackoverflow.com/users/9204/alexey-romanov}%
+\faStackOverflow~\httplink[Alexey Romanov]{stackoverflow.com/users/9204/alexey-romanov}%
 }
 \begin{document}
 \makecvtitle
@@ -36,20 +37,20 @@ I am interested in working as a Senior Software Engineer on challenging projects
 
 \section{Professional Skills}
 \subsection{Primary}
-\cvlistitem{Languages: Scala, Kotlin, Java, Erlang}
+\cvlistitem{Languages: C++, Scala, Kotlin, Java, Erlang, Python}
 \cvlistitem{Algorithms and data structures}
 \cvlistitem{Concurrent and parallel programming}
 \cvlistitem{Teaching, mentoring}
 \subsection{Intermediate}
-\cvlistitem{Languages: SQL, C\#, Haskell, JavaScript, C++, Prolog}
+\cvlistitem{Languages: Rust, SQL, C\#, Haskell, JavaScript, Prolog, Ruby}
 \cvlistitem{Databases (particularly SQLite)}
 \cvlistitem{Compilers, optimizations, code transformation}
+\cvlistitem{Machine Learning}
 \cvlistitem{OSGi, Eclipse RCP}
 \cvlistitem{IDEA/Android Studio plugin development}
 \subsection{Basic}
-\cvlistitem{Languages: C, Rust, OCaml, Lua, Scheme/Racket}
+\cvlistitem{Languages: C, OCaml, Lua, Scheme/Racket, TypeScript}
 \cvlistitem{Android development}
-\cvlistitem{Machine Learning}
 
 \section{Employment History}
 \cventry{2003--present}{Assistant Professor}{Moscow Institute of Electronic Technology}{Zelenograd}{}{}
@@ -66,40 +67,60 @@ I am interested in working as a Senior Software Engineer on challenging projects
 
 \cventry{2013}{Software Architect}{Likemelody LLC}{Zelenograd}{}{Natural language processing software}
 
-\cventry{2013--present}{Key Project Engineer}{Huawei Research}{Moscow}{}{Work primarily on Scalan and related/derived projects}
+\cventry{2013--present}{Key Project Engineer}{Huawei Research}{Moscow}{}{}
 
 \section{Main Projects}
 
-\cventry{2014--present}{Scalan}{Huawei Research}{}{}{A domain-specific optimization and specialization framework}
+\subsection{At Huawei Russian Research Institute}
+\cventry{2013--2016}{Scalan}{}{}{}{A domain-specific optimization and specialization framework}
+	\cvlistitem{One of main developers of Scalan framework and a Scala compiler plugin for this framework.}
+	\cvlistitem{Coauthor of a WGP2014 paper, patent filed.}
 	\cvlistitem{Skills: Scala, Compilers, Optimization, Code transformation}
-	\cvlistitem{Achievements: One of main developers of Scalan framework and Scala compiler plugin for this framework}
-	\cvlistitem{Effects: coauthor of a WGP2014 paper, patent filed}
 
-\cventry{2016}{SQLite Kernel Engine} {Huawei Research}{}{}{An approach to SQLite query optimization}
+\cventry{2016}{SQLite Kernel Engine}{}{}{}{An approach to SQLite query optimization}
+	\cvlistitem{Lua and C++ code generation from SQL queries, SQLite calls generated code instead of its own bytecode interpreter when detecting a repeated query.}
+	\cvlistitem{1.5 to 10x speedup on some queries, patent filed.}
 	\cvlistitem{Skills: Scala, C++, Lua, Compilers, Optimization, Code transformation}
-	\cvlistitem{Achievements: Lua and C++ code generation from SQL queries, SQLite calls generated code instead of its own bytecode interpreter when detecting a repeated query}
-	\cvlistitem{Effects: 1.5 to 10x speedup on some queries, patent filed}
+	
+\cventry{2016}{SQLite Kernel Engine IDEA Plugin}{}{}{}{IDE plugin for integration with SQLite Kernel Engine}
+	\cvlistitem{One of two developers of IDEA plugin integrating with SQLite Kernel Engine to provide queries to generate native code for and generate Java API to call these queries.}
+	\cvlistitem{Skills: Java, IDEA plugins, Android, Code generation}
+	
+\cventry{2017--2021}{Open-Source Team}{}{}{}{Contributions to open-source projects}
+	\cvlistitem{C++ API for Rust-based Tokenizers library, a new check in clang-tidy, bug fixes contributed to PyTorch, TensorFlow, seqeval, TVM, DMLC.}
+	\cvlistitem{Skills: C++, Python, Rust, Compilers, Optimization, Machine Learning}
 
+\cventry{2019--2020}{Fused Transformer}{}{}{}{Native C++ Transformer implementation}
+	\cvlistitem{Main developer of a full native C++ Transformer implementation for Android and desktop.}
+	\cvlistitem{Slight speedup compared with CPU Tensorflow/PyTorch on desktop, performance on par with ONNX Runtime on device. Project ended before GPU support could be implemented.}
+    \cvlistitem{Skills: C++, Python, Machine Learning, SIMD}
+	
+\cventry{2021--2022}{Panda VM Verifier}{}{}{}{}
+	\cvlistitem{Panda VM is Huawei's alternative to Android ART for use in Harmony OS and on server/desktop.}
+	\cvlistitem{Bytecode verifier verifies bytecode validity before running it: type correctness, lack of illegal jumps, etc.}
+	\cvlistitem{~40\% speedup overall, significant bug fixes and code clean-ups}
+    \cvlistitem{Skills: C++, Compilers}
+
+\subsection{Outside Huawei}
 \cventry{2010--2014}{erlang-sqlite3}{Focus-Media, then side-project}{}{}{An Erlang library for work with SQLite3 databases}
+	\cvlistitem{Took over maintenance and development of an abandoned Erlang library for working with SQLite3 databases. Attracted users and contributors.}
+	\cvlistitem{used in projects inside Focus-Media and by external developers}
 	\cvlistitem{Skills: Erlang, C, SQLite, Optimization}
-	\cvlistitem{Achievements: Took over maintenance and development of an abandoned Erlang library for working with SQLite3 databases.
-	Attracted users and contributors.}
-	\cvlistitem{Effects: used in projects inside Focus-Media and by external developers}
-
+	
 \cventry{2010--2012}{FocusPlay}{Focus-Media}{}{}{A system for automatically downloading and playing video on remote devices}
-	\cvlistitem{Skills: Erlang, C, Java, Network programming, Concurrent programming, Optimization}
-	\cvlistitem{Achievements: Responsible for developing the client side scheduling and processing, assisted with server side}
-	\cvlistitem{Effects: stable processing, successful deployment to multiple satisfied customers}
-
+	\cvlistitem{Responsible for developing the client side scheduling and processing, assisted with server side.}
+	\cvlistitem{Stable processing, successful deployment to multiple satisfied customers.}
+    \cvlistitem{Skills: Erlang, C, Java, Network programming, Concurrent programming, Optimization}
+	
 \cventry{2011--2012}{Several Eclipse RCP projects}{Focus-Media}{}{}{}
+	\cvlistitem{Developer on a SCADA system, responsible for aggregating sensor data timeseries, allowing and processing user queries on the data. Developer on automated workplace in a security system.}
 	\cvlistitem{Skills: Scala, Java, OSGi, Eclipse RCP, Network programming, UI design}
-	\cvlistitem{Achievements: Developer on a SCADA system, responsible for aggregating sensor data timeseries, allowing and processing user queries on the data. Developer on automated workplace in a security system.}
-
+	
 \cventry{2013}{A phone customer service system}{LikeMelody LLC}{}{}{}
+	\cvlistitem{Architect and developer on a system automating first-line phone call center for small business.}
+	\cvlistitem{Unreleased when I left the company.}
 	\cvlistitem{Skills: Natural Language Processing, Machine Learning, Artificial Intelligence}
-	\cvlistitem{Achievements: Architect and developer on a system automating first-line phone call center for small business.}
-	\cvlistitem{Effect: Unreleased when I left the company.}
-
+	
 \section{Languages}
 \cvitemwithcomment{Russian}{Native}{}
 \cvitemwithcomment{English}{Fluent (written), Advanced (spoken)}{}
